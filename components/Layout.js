@@ -1,13 +1,18 @@
+import Nav from './Nav' // Todos los componentes que importe en layout son por default, se muestran en las otras paginas //
+import Header from './Header'
 import styles from '../styles/Layout.module.css'
  
 const Layout = ({ children }) => {
     return (
-    <div className={styles.container}>
-         <main className={styles.main}>
-
-          {children}    {children}{children}{children}
+    <>
+      <Nav />
+        <div className={styles.container}>
+          <main className={styles.main}>
+            <Header />
+            {children}
          </main>
-       </div>
+      </div>
+     </>
  
   )
 }
